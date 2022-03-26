@@ -1,0 +1,26 @@
+body {
+    background-color:#34495e;
+    color: white;    
+    height: 300px;
+}
+#headerBack{
+    width: 100%;   
+}
+
+.idCard {
+    background-color: #e74c3c;
+    width: 100%;
+}
+
+.valueIdCard {
+    color: #f1c40f;
+}
+
+table div {
+    line-height: 25px;
+}
+
+.titleIdCard{
+    font-size: 20px;
+    font-weight: bold;
+}
