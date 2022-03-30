@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    font-family: 'Verdana';
+}
+
+#mainNav{
+    margin: 0;
+    padding: 0;
+    width: 100%;   
+    height: 100px;
+    background-color: #2980b9;  
+    position: relative;       
+}
+
+.element {   
+    color: white;   
+    padding: 30px;
+    text-align: center;     
+}
+
+#naviList {
+    position: absolute;
+    right: 25%;
+    top: 40%;    
+}
+
+#logoImg{
+    position: absolute;
+    left: 15%;
+    top: 15%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.mainArticleWrapper{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    padding: 6%;         
+}
+
+.breadcrumb{   
+    background-color: white;
+    margin-top: 0; 
+    padding-top: 5%;   
+}
+
+.article {
+    width: 40%;       
+}
+
+.image {    
+    width: 50%;
+    padding: 20px;
+    display: block;
+}
