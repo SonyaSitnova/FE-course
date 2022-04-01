@@ -52,11 +52,12 @@ header {
 }
 
 .article {
-    width: 40%;       
+    width: 40%;  
+    display: inline-block;     
 }
 
 .image {    
     width: 50%;
     padding: 20px;
-    display: block;
+    display:inline-block;
 }
