@@ -190,7 +190,8 @@ header {
   line-height: 40px;
 }
 /*Section - "overview"*/
-#overview {
+#overview,
+#video {
   height: 100vh;
   position: relative;
 }
@@ -207,7 +208,7 @@ header {
   top: 50px;
 }
 #containerOverview h2 {
-  font-family: 'D-DIN';
+  font-family: 'D-DIN Bold';
   font-size: 50px;
   font-weight: 400;
   font-style: normal;
@@ -216,9 +217,10 @@ header {
   margin: 0 0 20px;
   text-align: center;
   margin: 0 0 30px 0;
+  text-align: left;
 }
 #containerOverview h3 {
-  font-family: 'D-DIN';
+  font-family: 'D-DIN Bold';
   font-size: 20px;
   font-weight: 400;
   font-style: normal;
@@ -227,18 +229,20 @@ header {
   margin: 0 0 20px;
   text-align: center;
   margin: 0 0 10px;
+  text-align: left;
 }
 table td {
   color: #fff;
   padding: 20px 0;
   border-bottom: 1pt solid rgba(255, 255, 255, 0.3);
-  font-family: 'D-DIN';
+  font-family: 'D-DIN Bold';
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
 }
 table {
+  font-family: 'D-DIN Bold';
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -247,10 +251,12 @@ table {
 table td:last-child {
   text-align: right;
 }
-#containerOverview span {
+#containerOverview span,
+#containerMerlin span {
   color: #868686;
 }
-#controlBar {
+#controlBar,
+#controlBarGallery {
   text-align: center;
   width: 100%;
   margin: 20px 0;
@@ -269,14 +275,17 @@ table td:last-child {
 .dot:hover {
   background-color: #717171;
 }
-.right svg {
+.right svg,
+.rightGallery svg {
   line-height: 20px;
 }
-.left {
+.left,
+.leftGallery {
   float: left;
   width: 20%;
 }
-.right {
+.right,
+.rightGallery {
   float: right;
   width: 20%;
 }
@@ -285,23 +294,20 @@ table td:last-child {
   width: 20%;
 }
 /* Section - "Video"*/
-#video {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
 #videoImage {
   position: absolute;
-  height: 800px;
+  height: 600px;
   width: 100%;
+  z-index: 10;
 }
 .containerVideo {
   padding: 0 5%;
   position: absolute;
-  bottom: 0;
+  bottom: 35%;
+  z-index: 30;
 }
 .containerVideo h2 {
-  font-family: 'D-DIN';
+  font-family: 'D-DIN Bold';
   font-size: 48px;
   font-weight: 400;
   font-style: normal;
@@ -310,7 +316,7 @@ table td:last-child {
   line-height: 48px;
 }
 .containerVideo h3 {
-  font-family: 'D-DIN';
+  font-family: 'D-DIN Bold';
   font-size: 20px;
   font-weight: 400;
   font-style: normal;
@@ -322,8 +328,8 @@ table td:last-child {
 }
 .videoButton {
   position: absolute;
-  top: 50%;
-  right: 50%;
+  bottom: 35%;
+  z-index: 50;
 }
 .videoButton:hover {
   transition: scale(1, 1);
@@ -337,9 +343,22 @@ table td:last-child {
   font-size: 20px;
 }
 /* section   - "merlin"*/
-#merlin img {
-  height: 600px;
+#merlin {
+  height: 100vh;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  display: block;
+  background: url(/images/Merlin.webp);
+  background-size: contain;
+  position: relative;
+}
+#containerMerlin {
+  padding: 0 5%;
+  position: absolute;
+  top: 15%;
+  text-align: left;
+  width: 520px;
 }
 #containerMerlin h2 {
   font-family: 'D-DIN';
@@ -357,18 +376,21 @@ table td:last-child {
   text-transform: uppercase;
   margin: 0 0 10px;
 }
-#containerMerlin {
-  text-align: left;
-  width: 520px;
-}
 /* section - "gallery"*/
 #gallery {
+  position: relative;
   height: 600px;
   width: 100%;
 }
 #gallery img {
+  position: absolute;
   height: 550px;
   width: 100%;
+}
+#controlBarGallery {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
 }
 /* section - more information */
 .lineTall {
@@ -391,6 +413,9 @@ table td:last-child {
   border: 2px solid #fff;
   display: block;
 }
+.btn :hover {
+  background-color: white;
+}
 .text {
   border-bottom: none;
   padding: 0 10px;
@@ -402,9 +427,6 @@ table td:last-child {
 }
 .text:hover {
   color: black;
-}
-.btn:hover {
-  background-color: white;
 }
 #moreInformation a {
   display: inline-block;

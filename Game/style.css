@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/font/Roboto-Bold.ttf);
+}
+body {
+  background: url(/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#containerStartGame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonStart {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+.buttonStart label {
+  font-family: 'Roboto';
+  font-style: normal;
+  color: #361157;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-top: 26px;
+}
+#gameOver {
+  background-color: rgba(255, 148, 148, 0.4);
+}
+h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  color: #361157;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #C0392B;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.containerScore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerScore label {
+  font-family: 'Roboto';
+  font-style: normal;
+  color: #361157;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 48px;
+  text-transform: none;
+}
+.buttonTry {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.buttonTry label {
+  font-family: 'Roboto';
+  font-style: normal;
+  color: #361157;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: Roboto;
+    src: url(/font/Roboto-Bold.ttf);
+  }
+
+
+body {
+    background: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;      
+}
+
+.buttonStyle() {
+    width: 800px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+    border-radius: 20px;
+    background-color: lighten(#FFFFFF, 80%);  
+    text-align: center;    
+}
+
+.buttonTextStyle(){
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #361157;
+    font-weight: 700;
+    font-size: 36px;          
+    text-transform: uppercase;  
+}
+
+// --------- Start Game -----------
+
+#containerStartGame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonStart{   
+    .buttonStyle();
+    display: flex;   
+    justify-content: center;
+    margin-top: 15%; 
+    
+    label {
+        .buttonTextStyle();
+        margin-top: 26px;    
+    }
+}
+// ----------- Game Over ----------
+
+
+#gameOver{
+    background-color: lighten(#C7000066, 40%);
+}
+
+h1 {
+    .buttonTextStyle();
+    color: #C0392B;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+
+}
+
+.containerScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    label{
+        .buttonTextStyle();
+        color: white;
+        font-size: 48px;
+        text-transform: none;
+  
+    }
+}
+
+.buttonTry{
+    .buttonStyle();
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+
+    label {
+        .buttonTextStyle();                   
+    }
+}
