@@ -6,6 +6,8 @@ body {
   background: url(/images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 #containerStartGame {
   display: flex;
@@ -35,6 +37,8 @@ body {
 }
 #gameOver {
   background-color: rgba(255, 148, 148, 0.4);
+  width: 100vw;
+  height: 100vh;
 }
 h1 {
   font-family: 'Roboto';
@@ -48,7 +52,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 50px;
 }
 .containerScore {
   display: flex;
@@ -77,6 +82,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
   margin-top: 150px;
 }
 .buttonTry label {
@@ -86,4 +92,83 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
+}
+nav {
+  display: flex;
+}
+.score {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0 0 20px 0;
+  width: 200px;
+  height: 80px;
+  display: flex;
+}
+.refresh {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0 0 0 20px;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  background-image: url(images/restart\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.timer {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  width: 800px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+.timer .timerSlider {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  width: 1000px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #8E44AD;
+  animation: timerAnimation 5s linear forwards;
+}
+@keyframes timerAnimation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 4%;
+  }
+}
+main {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  width: 1250px;
+  height: 800px;
+  display: flex;
+  margin: auto;
 }
