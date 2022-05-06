@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
 }
+body a {
+  text-decoration: none;
+}
 #containerStartGame {
   display: flex;
   align-items: center;
@@ -108,6 +111,19 @@ nav {
   width: 200px;
   height: 80px;
   display: flex;
+  flex-direction: column;
+  padding: 10px 18px;
+  line-height: 35px;
+}
+.score label {
+  font-family: 'Roboto';
+  font-style: normal;
+  color: #361157;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 22px;
 }
 .refresh {
   width: 800px;
@@ -171,4 +187,283 @@ main {
   height: 800px;
   display: flex;
   margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  position: relative;
+}
+.card,
+.cardInnerEarth {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerJupiter {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerMars {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerMercury {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerNeptune {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerPluto {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerSaturn {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerUranus {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerVenera {
+  height: 194px;
+  width: 149px;
+}
+.cardInnerEarth {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerEarth {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/earth.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardEarth {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/earth.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/earth.png");
+  }
+}
+.cardInnerJupiter {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerJupiter {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/jupiter.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardJupiter {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/jupiter.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/jupiter.png");
+  }
+}
+.cardInnerMars {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerMars {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/mars.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardMars {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/mars.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/mars.png");
+  }
+}
+.cardInnerVenera {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerVenera {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/venera.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardVenera {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/venera.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/venera.png");
+  }
+}
+.cardInnerMercury {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerMercury {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/mercury.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardMercury {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/mercury.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/mercury.png");
+  }
+}
+.cardInnerNeptune {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerNeptune {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/neptune.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardNeptune {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/neptune.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/neptune.png");
+  }
+}
+.cardInnerPluto {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerPluto {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/pluto.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardPluto {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/pluto.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/pluto.png");
+  }
+}
+.cardInnerSaturn {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerSaturn {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/saturn.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardSaturn {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/saturn.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/saturn.png");
+  }
+}
+.cardInnerUranus {
+  background-image: url("images/Card_Hover.png");
+}
+.card:hover .cardInnerUranus {
+  transform: rotateY(0);
+  animation: rotateCard 1s ease-in-out;
+  background-image: url("images/uranus.png");
+  animation-iteration-count: 1;
+}
+@keyframes rotateCardUranus {
+  0% {
+    transform: rotateY(0);
+    background-image: url("images/Card_Hover.png");
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-image: url("images/Card_Hover.png");
+  }
+  51% {
+    background-image: url("images/uranus.png");
+  }
+  100% {
+    transform: rotateY(0);
+    background-image: url("images/uranus.png");
+  }
 }
