@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .tooltipItem{
+            position: relative;
+            height: 55px;
+            width: 60px;
+            padding-top:5px;
+            margin: 200px auto 0 auto;
+
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            background-color: #27ae60;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .tooltipWrapper{
+            display: none ;
+            position: absolute;
+            height: 130px;
+            width: 200px;
+            top: 70px;
+            left: 40px;
+            padding: 20px;
+            background-color: #bdc3c7;
+            box-shadow: 5px 5px 5px #2c3e50;
+            color:#2c3e50;
+            font-size: 14px;
+        }
+
+        .minus{
+            display: none;
+            margin-top:-3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltipItem">
+        <div  class="plus" onclick="displayTooltip()">+</div>
+        <div class="minus" onclick = "displayTooltip()">-</div>
+        <div class="tooltipWrapper">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente error facere possimus repellendus suscipit autem ullam corporis, voluptates officiis ex sunt consequatur ipsa dolore ipsum? Quidem, placeat quam. Non, id!   
+        </div>
+    </div>
+
+    <script>
+
+            var tooltipWrapper = document.querySelector('.tooltipWrapper');
+            var plusButton = document.querySelector('.plus');
+            var minusButton = document.querySelector('.minus');
+           
+            function displayTooltip() {
+                var isHidden = tooltipWrapper.style.display === "none";
+                if(isHidden){
+                    tooltipWrapper.style.display = "block";
+                    minusButton.style.display = "block";
+                    plusButton.style.display = "none";
+                }else{
+                    tooltipWrapper.style.display = "none";
+                    minusButton.style.display = "none";
+                    plusButton.style.display = "block";
+                }
+            };
+           
+            plusButton.addEventListener('click', displayTooltip());
+            minusButton.addEventListener('click', displayTooltip());
+
+
+        //    var tooltipWrapper = document.querySelector('.tooltipWrapper');
+        //     var plusButton = document.querySelector('.plus');
+        //     var minusButton = document.querySelector('.minus');
+
+        //     function displayTooltip(){
+        //         tooltipWrapper.hidden = false;
+        //         minusButton.hidden = false;
+        //     }
+
+        //     function hideTooltip(){
+        //         tooltipWrapper.hidden = true;
+        //         minusButton.hidden = true;
+        //     }
+
+        //     plusButton.addEventListener('click', displayTooltip);
+        //     minusButton.addEventListener('click', hideTooltip);
+          
+     
+
+
+    </script>
+
+</body>
+</html>
