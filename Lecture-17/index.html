@@ -13,33 +13,32 @@
 
     <main class="PageMainContainer">
         <nav class="MainPageNav">
-            <div class="EditPageButton" onclick="onClickEditToggle()">Edit</div>
+            <div class="EditPageButton">
+              <div class="edit">Edit</div>
+              <div class="stop">Stop Editing</div>
+            </div>
         </nav>
-        <section class="PeopleCardWrapper">
+        <section class="PeopleCardWrapper empty">
             <div class="PeopleCardsContainer">No items are added</div>
-           
         </section>
         <aside class="EditPeopleWrapper">
             <div class="TitleInputPair">
                 <label>Name:</label>
-                <input class="EditPeopleInput" id="name"/>
+                <input class="EditPeopleInput"  name="name"/>
             </div>
             <div class="TitleInputPair">
                 <label>Job title:</label>
-                <input class="EditPeopleInput" id="jobTitle"/>
+                <input class="EditPeopleInput" name="job"/>
             </div>
             <div class="TitleInputPair">
                 <label>E-mail:</label>
-                <input class="EditPeopleInput" id="mail"/>
+                <input class="EditPeopleInput" name="email"/>
             </div>
             <div class="TitleInputPair">
                 <label>Phone:</label>
-                <input class="EditPeopleInput" type="number" id="phone"/>
+                <input class="EditPeopleInput" type="number" name="phone"/>
             </div>
-            <button id="AddOnePerson" type="submit" >+ Add person</button>
-
-       
-
+            <button id="AddOnePerson">+ Add person</button>
         </aside>
     </main>
     
