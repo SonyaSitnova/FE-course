@@ -1,5 +1,6 @@
 var menuButton = document.querySelector('.EditPageButton');
 var addPersonButton = document.getElementById('AddOnePerson');
+var allPeople = [];
 
 menuButton.addEventListener('click', onMenuButtonPress);
 addPersonButton.addEventListener('click', onAddPersonPress);
@@ -13,11 +14,10 @@ function onMenuButtonPress(){
 
 function onAddPersonPress(){
   var person = getPersonData();
-  addPersonCard(person);
+  allPeople.push(person);
+  var lastPersonId = allPeople.length - 1;
+  addPersonCard(person, lastPersonId);
   clearForm();
-
-  var personCard = document.querySelector('.PersonCard');  
-  personCard.addEventListener('click', onEditPersonPress);
  
 }
 
@@ -33,20 +33,39 @@ function getPersonData(){
   return person;
 }
 
-function addPersonCard(person){
+function setPersonData(person){
+  var allInputElements = document.querySelectorAll('.EditPeopleInput');
+
+  for(var i = 0; i < allInputElements.length; i++){
+    var key = allInputElements[i].getAttribute('name');
+    allInputElements[i].value = person[key];
+  }
+}
+
+function addPersonCard(person, personId){
   var cardsWrapper = document.querySelector('.PeopleCardWrapper');
   var card = document.createElement('div');
   card.classList.add('PersonCard');
+  card.dataset.id = personId;
+  card.addEventListener('click', onCardClicked);
 
   card.innerHTML = 
-    '<div class="PersonImage "></div>' + 
-    '<div class="PersonName edit" name="name"">' + person.name + '</div>' + 
-    '<div class="personJobTitle edit" name="job" >' + person.job + '</div>' + 
-    '<div class="eMail edit"  name="email">' + person.email + '</div>' + 
-    '<div class="PersonPhoneNumber edit" name="phone">' + person.phone + '</div>';
+    '<div class="PersonImage " ></div>' + 
+    '<div class="PersonName " >' + person.name + '</div>' + 
+    '<div class="personJobTitle " >' + person.job + '</div>' + 
+    '<div class="eMail " >' + person.email + '</div>' + 
+    '<div class="PersonPhoneNumber " >' + person.phone + '</div>';
 
   cardsWrapper.appendChild(card);
   cardsWrapper.classList.remove('empty');
+}
+
+function onCardClicked(event){
+  var allPeopleKey = event.currentTarget.dataset.id;
+  var person = allPeople[allPeopleKey];
+
+  clearForm();
+  setPersonData(person);
 }
 
 function clearForm(){
@@ -58,26 +77,3 @@ function clearForm(){
 }
 
 
-function onEditPersonPress(){
-    var personEdit = getPersonFromCard();    
-    onPersonCardPress(personEdit);
-}
-
-function getPersonFromCard(){  
-    var cardDataElements = document.querySelectorAll('.edit');    
-    var personEdit = {};
-
-    for(var i =0; i < cardDataElements.length; i++){
-
-        var key = cardDataElements[i].getAttribute('name');       
-        personEdit[key] = cardDataElements[i].innerHTML;
-    }   
-   
-    return personEdit;
-}
-
-function onPersonCardPress(personEdit){
-
-   s
-    
-}
