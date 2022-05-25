@@ -1,5 +1,6 @@
 var menuButton = document.querySelector('.EditPageButton');
 var addPersonButton = document.getElementById('AddOnePerson');
+
 var allPeople = [];
 
 menuButton.addEventListener('click', onMenuButtonPress);
